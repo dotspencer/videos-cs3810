@@ -5,25 +5,22 @@ body{
   text-align: center;
   margin: 0;
 }
-.content{
-  float: left;
-  margin-left: calc(50vw - 550px);
+.content{}
+#player {
+    width: calc(100% - 360px);
+    height: 100vh;
+    float: left;
+    background-color: #000;
 }
-#player{
-  width: 800px;
-  height: 600px;
-  float: left;
-  background-color: #000;
-}
-.playlist{
-  font-weight: 100;
-  text-align: left;
-  width: 300px;
-  height: 100vh;
-  float: left;
-  background-color: #333;
-  overflow: scroll;
-  color: lightgray;
+.playlist {
+    font-weight: 100;
+    text-align: left;
+    width: 360px;
+    height: 100vh;
+    float: right;
+    background-color: #333;
+    overflow: scroll;
+    color: lightgray;
 }
 .vid-link{
   padding: 10px;
@@ -32,12 +29,16 @@ body{
 .vid-link:hover{
   background-color: #444;
 }
-.vid-link:last-child{
-  padding-bottom: 20px;
+.vid-link.current{
+  color: orange;
+  border-left: 3px solid orange;
 }
 .title{
   padding: 15px 10px 10px;
   font-size: 1.4em;
   border-top: 1px solid #000;
   cursor: default;
+}
+.group + .group{
+  margin-top: 20px;
 }
