@@ -7,6 +7,8 @@ xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     data = JSON.parse(this.responseText);
     show(data);
+    document.querySelector('.vid-link').classList.add('current');
+
     startYoutube();
   }
 };
@@ -43,13 +45,15 @@ function show(data){
 }
 
 function selectVideo() {
+  // Clearing previous selected
   var previous = document.querySelector('.current');
   if(previous != null){
     previous.classList.remove('current');
   }
 
   this.classList.add('current');
-  console.log(this);
+
+  player.loadVideoById(this.getAttribute('data-id'));
 }
 
 /*-=-=-=-=-=-=-=-=-*/
