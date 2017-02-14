@@ -1,3 +1,7 @@
+/*-=-=-=-=-
+ Run on http://www.cs.utah.edu/~rajeev/cs3810/ to generate videos.json
+=-=-=-=-=-*/
+
 var videos = [];
 
 for (var i = 0; i < rows.length; i++) {

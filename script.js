@@ -1,16 +1,37 @@
-var videos = [];
+var playlist = document.querySelector('.player');
+var data = [];
 
+// Requesting videos.json and loading into data[]
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     videos = JSON.parse(this.responseText);
-    console.log(videos);
+    show(videos);
   }
 };
 
 xhr.open('GET', 'videos.json');
 xhr.send();
 
+function show(){
+  for (var i = 0; i < data.length; i++) {
+    var titleText = data.title;
+    var vids = data.videos;
+
+    var group = document.createElement('div');
+    group.classList.add('group');
+
+    var title = document.createElement('div');
+    title.classList.add('title');
+    title.innerText = titleText;
+
+    group.appendChild(title);
+
+    for (var j = 0; j < vids.length; j++) {
+      var id = vids[j];
+    }
+  }
+}
 
 /*-=-=-=-=-=-=-=-=-*/
 
