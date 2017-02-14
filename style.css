@@ -23,23 +23,30 @@ body{
     color: lightgray;
 }
 .vid-link{
-  padding: 10px;
+  padding: 12px;
   cursor: pointer;
+  background-color: #222;
 }
 .vid-link:hover{
-  background-color: #444;
+  background-color: #1b1b1b;
 }
 .vid-link.current{
   color: orange;
   border-left: 3px solid orange;
 }
 .title{
-  padding: 15px 10px 10px;
+  padding: 15px 12px 12px;
   font-size: 1.4em;
-  border-top: 1px solid #000;
-  cursor: default;
+  cursor: pointer;
   font-weight: 200;
+  border-bottom: 1px solid #1b1b1b;
 }
-.group + .group{
-  margin-top: 20px;
+.title:hover{
+  background-color: #444;
+}
+.title.lock{
+  pointer-events: none;
+}
+.group{
+  overflow: hidden;
 }

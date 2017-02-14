@@ -7,6 +7,10 @@ xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     data = JSON.parse(this.responseText);
     show(data);
+    debugger;
+    closeAllGroups();
+
+    document.querySelector('.title').classList.add('lock');
     document.querySelector('.vid-link').classList.add('current');
 
     startYoutube();
@@ -25,6 +29,7 @@ function show(data){
     group.classList.add('group');
 
     var title = document.createElement('div');
+    title.addEventListener('click', toggleGroup);
     title.classList.add('title');
     title.innerText = titleText;
 
@@ -50,10 +55,38 @@ function selectVideo() {
   if(previous != null){
     previous.classList.remove('current');
   }
+  // Locking group open
+  var pLock = document.querySelector('.lock');
+  if(pLock != null){
+    pLock.classList.remove('lock');
+  }
+  this.parentElement.querySelector('.title').classList.add('lock');
 
   this.classList.add('current');
-
   player.loadVideoById(this.getAttribute('data-id'));
+}
+
+function closeAllGroups(){
+  var groups = document.querySelectorAll('.group');
+  for (var i = 1; i < groups.length; i++) {
+    var title = groups[i].querySelector('.title');
+    toggle(title);
+  }
+}
+
+function toggleGroup(){
+  var title = this;
+  toggle(title);
+}
+
+function toggle(title){
+  if(!title.classList.contains('open')){
+    title.classList.add('open');
+    title.parentElement.style.height = title.clientHeight + 1 + "px";
+  } else {
+    title.classList.remove('open');
+    title.parentElement.style.height = "";
+  }
 }
 
 /*-=-=-=-=-=-=-=-=-*/
