@@ -40,6 +40,7 @@ body{
   cursor: pointer;
   font-weight: 200;
   border-bottom: 1px solid #1b1b1b;
+  user-select: none;
 }
 .title:hover{
   background-color: #444;
