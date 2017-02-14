@@ -11,9 +11,12 @@ for (var i = 0; i < rows.length; i++) {
   }
 
   var title = cells[1].innerText;
-  title = title.substring(0, title.length - 1);
-  var vid_links = cells[4].querySelectorAll('a');
+  // Trim off trailing '.'
+  if(title[title.length - 1] == "."){
+    title = title.substring(0, title.length - 1);
+  }
 
+  var vid_links = cells[4].querySelectorAll('a');
   if (vid_links.length == 0) {
     continue;
   }
