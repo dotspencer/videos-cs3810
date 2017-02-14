@@ -49,11 +49,14 @@ function listAll(data){
 }
 
 function selectVideo() {
+
   // Clearing previous selected
   var previous = document.querySelector('.current');
   if(previous != null){
     previous.classList.remove('current');
   }
+  this.classList.add('current');
+
   // Locking group open
   var pLock = document.querySelector('.lock');
   if(pLock != null){
@@ -61,7 +64,6 @@ function selectVideo() {
   }
   this.parentElement.querySelector('.title').classList.add('lock');
 
-  this.classList.add('current');
   player.loadVideoById(this.getAttribute('data-id'));
 }
 
