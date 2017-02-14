@@ -32,7 +32,7 @@ function show(data){
       var id = vids[j];
       var link = document.createElement('div');
       link.classList.add('vid-link');
-      link.innerText = "Part: " + j;
+      link.innerText = "Part: " + (j + 1);
       link.setAttribute('data-id', id);
       group.appendChild(link);
     }
@@ -58,7 +58,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
-    videoId: 'M7lc1UVf-VE',
+    videoId: 'xxM7lc1UVf-VE',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
