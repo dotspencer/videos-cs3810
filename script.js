@@ -6,8 +6,7 @@ var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     data = JSON.parse(this.responseText);
-    show(data);
-    debugger;
+    listAll(data);
     closeAllGroups();
 
     document.querySelector('.title').classList.add('lock');
@@ -20,7 +19,7 @@ xhr.onreadystatechange = function(){
 xhr.open('GET', 'videos.json');
 xhr.send();
 
-function show(data){
+function listAll(data){
   for (var i = 0; i < data.length; i++) {
     var titleText = data[i].title;
     var vids = data[i].videos;
@@ -29,7 +28,7 @@ function show(data){
     group.classList.add('group');
 
     var title = document.createElement('div');
-    title.addEventListener('click', toggleGroup);
+    title.addEventListener('click', toggleParent);
     title.classList.add('title');
     title.innerText = titleText;
 
@@ -69,24 +68,32 @@ function selectVideo() {
 function closeAllGroups(){
   var groups = document.querySelectorAll('.group');
   for (var i = 1; i < groups.length; i++) {
-    var title = groups[i].querySelector('.title');
-    toggle(title);
+    toggle(groups[i]);
   }
 }
 
-function toggleGroup(){
-  var title = this;
-  toggle(title);
+function toggleParent(){
+  toggle(this.parentNode);
 }
 
-function toggle(title){
-  if(!title.classList.contains('open')){
-    title.classList.add('open');
-    title.parentElement.style.height = title.clientHeight + 1 + "px";
-  } else {
-    title.classList.remove('open');
-    title.parentElement.style.height = "";
+function toggle(group){
+  var links = group.querySelectorAll('.vid-link');
+
+  for (var i = 0; i < links.length; i++) {
+    if(links[i].classList.contains('hidden')){
+      show(links[i]);
+    } else{
+      hide(links[i]);
+    }
   }
+}
+
+function hide(element){
+  element.classList.add('hidden');
+}
+
+function show(element){
+  element.classList.remove('hidden');
 }
 
 /*-=-=-=-=-=-=-=-=-*/

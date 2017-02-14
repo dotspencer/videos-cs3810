@@ -35,10 +35,10 @@ body{
   border-left: 3px solid orange;
 }
 .title{
-  padding: 15px 12px 12px;
-  font-size: 1.4em;
+  padding: 16px;
+  font-size: 1.06em;
   cursor: pointer;
-  font-weight: 200;
+  font-weight: 300;
   border-bottom: 1px solid #1b1b1b;
   user-select: none;
 }
@@ -50,4 +50,8 @@ body{
 }
 .group{
   overflow: hidden;
+  transition: all .15s;
+}
+.hidden{
+  display: none;
 }
