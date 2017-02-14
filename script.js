@@ -1,22 +1,23 @@
-var playlist = document.querySelector('.player');
+var playlist = document.querySelector('.playlist');
 var data = [];
 
 // Requesting videos.json and loading into data[]
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
-    videos = JSON.parse(this.responseText);
-    show(videos);
+    data = JSON.parse(this.responseText);
+    show(data);
   }
 };
 
 xhr.open('GET', 'videos.json');
 xhr.send();
 
-function show(){
+function show(data){
+  debugger;
   for (var i = 0; i < data.length; i++) {
-    var titleText = data.title;
-    var vids = data.videos;
+    var titleText = data[i].title;
+    var vids = data[i].videos;
 
     var group = document.createElement('div');
     group.classList.add('group');
@@ -29,7 +30,14 @@ function show(){
 
     for (var j = 0; j < vids.length; j++) {
       var id = vids[j];
+      var link = document.createElement('div');
+      link.classList.add('vid-link');
+      link.innerText = "Part: " + j;
+      link.setAttribute('data-id', id);
+      group.appendChild(link);
     }
+
+    playlist.appendChild(group);
   }
 }
 
