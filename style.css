@@ -1,0 +1,22 @@
+body{
+  background-color: #222;
+  text-align: center;
+  margin: 0;
+}
+.content{
+  float: left;
+  margin-left: calc(50vw - 550px);
+}
+#player{
+  width: 800px;
+  height: 600px;
+  float: left;
+  background-color: #000;
+}
+.playlist{
+  width: 300px;
+  height: 100vh;
+  float: left;
+  background-color: #333;
+  overflow: scroll;
+}

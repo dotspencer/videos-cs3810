@@ -1,0 +1,208 @@
+[
+  {
+    "title": "Introduction to Computer Organization",
+    "videos": [
+      "7UzX8c6kLAk",
+      "AOfpC46Q2RI"
+    ]
+  },
+  {
+    "title": "Measuring Performance",
+    "videos": [
+      "3xmSNPAOaHU",
+      "2cg1sm21LOU",
+      "u-hkYqIIYQY",
+      "7tmYwN8Gypo"
+    ]
+  },
+  {
+    "title": "MIPS ISA",
+    "videos": [
+      "0Df3NPbsJyI",
+      "pBEdxamiCIA",
+      "76BZcI5a9Ms"
+    ]
+  },
+  {
+    "title": "More MIPS ISA",
+    "videos": [
+      "ajucTXjhWeU",
+      "e5leivqTYQ8"
+    ]
+  },
+  {
+    "title": "Procedure Calls",
+    "videos": [
+      "TObm9XQB3VI",
+      "yt8m2yW1mbk",
+      "BOz_Dhj9QBU"
+    ]
+  },
+  {
+    "title": "Assembly Programs",
+    "videos": [
+      "o0LAqNeCaEM",
+      "639pb8cr4fc",
+      "qMq7DlWLucY"
+    ]
+  },
+  {
+    "title": "MIPS, Number Systems",
+    "videos": [
+      "i8OYIAQiYF8",
+      "YtI7EsWdDRM",
+      "HVMzXOHtb-E"
+    ]
+  },
+  {
+    "title": "Addition, Multiplication, Division",
+    "videos": [
+      "kKIcQ1xn3PQ",
+      "z6uRKRg6iKo",
+      "QML7h3PNRWc",
+      "lK4-TNdOpYo",
+      "gDrblCR24G4",
+      "FydYZq924cM"
+    ]
+  },
+  {
+    "title": "Floating Point Representations & Operations",
+    "videos": [
+      "gAVVOGuoZko",
+      "Fyyxs_5Gcm8"
+    ]
+  },
+  {
+    "title": "Floating Point, Digital Design",
+    "videos": [
+      "Numrr36Oq3c",
+      "TjEmbrF7YI4",
+      "gvJCb0FL9GI",
+      "qrjTO_ydTpw"
+    ]
+  },
+  {
+    "title": "Hardware for Arithmetic",
+    "videos": [
+      "3z668Gf2Qms",
+      "moGVfZJ31EQ",
+      "iTkFDtTHNdw"
+    ]
+  },
+  {
+    "title": "Adders, Sequential Circuits",
+    "videos": [
+      "yHmgaxE8ATk",
+      "PjktT-Mjzow",
+      "Q0f1MgaQwzI",
+      "q3cbgQmdf4I"
+    ]
+  },
+  {
+    "title": "Sequential Circuits, FSMs",
+    "videos": [
+      "aKpK4laMpfk",
+      "2qlz4_p7G9w",
+      "lvB5yeYHW8w",
+      "XqDuVaySC5s"
+    ]
+  },
+  {
+    "title": "CPU Organization and Design",
+    "videos": [
+      "9ZJgY17aRJA",
+      "w3Eh6p_HNYU",
+      "MRSiXQlv0l8"
+    ]
+  },
+  {
+    "title": "Pipelining",
+    "videos": [
+      "DbEQyEJoTv8",
+      "JkzNIUmP_CQ",
+      "VIRIKFYEsh8"
+    ]
+  },
+  {
+    "title": "Pipelining Hazards",
+    "videos": [
+      "pWdNIikDMyQ"
+    ]
+  },
+  {
+    "title": "More on Pipelining",
+    "videos": [
+      "k3osCp8ppiE",
+      "6Z0eIaL7a0k"
+    ]
+  },
+  {
+    "title": "Control Hazards",
+    "videos": [
+      "1XkrzppND3s",
+      "lY8Wa6smqcM",
+      "xME06CgwQFU",
+      "Zeuc2PiXH8k",
+      "NW9iMs-Tycc"
+    ]
+  },
+  {
+    "title": "Out-of-order, Cache Hierarchies",
+    "videos": [
+      "yl9v9dBuzCM",
+      "ToZE8BrWKXQ",
+      "0ZtGX_D_z6U",
+      "Q4xs0tvFpAY",
+      "UHSE6SD6ZO8",
+      "t9SWoNd83bU"
+    ]
+  },
+  {
+    "title": "Cache Hierarchies",
+    "videos": [
+      "gIUMKkVA-Jw",
+      "uP0lE8XyeLo",
+      "ZRyOegzrjKs",
+      "6zPFctwwgjA"
+    ]
+  },
+  {
+    "title": "Memory Hierarchies",
+    "videos": [
+      "FjXxQPh8IdU",
+      "JYyW4yQZu_8",
+      "2FNcxAA_kBA"
+    ]
+  },
+  {
+    "title": "Virtual Memory, Multiprocessors",
+    "videos": [
+      "JnDxmjxPRIs",
+      "RSkh3QJCd94"
+    ]
+  },
+  {
+    "title": "Multiprocessor Systems",
+    "videos": [
+      "wSCDO7yNWiA",
+      "bWJkJGtagAc",
+      "CgfZxS-DRXw"
+    ]
+  },
+  {
+    "title": "More Multiprocessors",
+    "videos": [
+      "lAMwPcUPqIM",
+      "ErjIUmdp4Yo",
+      "7gCzwhHlAeY"
+    ]
+  },
+  {
+    "title": "Multi-core processors",
+    "videos": [
+      "kh-SZ3M3jLk",
+      "ov_LAL31LBE",
+      "FcS_kQOIykU"
+    ]
+  }
+]
