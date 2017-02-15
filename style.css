@@ -26,9 +26,10 @@ body{
     color: lightgray;
 }
 .vid-link{
-  padding: 12px;
+  padding: 12px 20px;
   cursor: pointer;
   background-color: #222;
+  border-bottom: 1px solid #111;
 }
 .vid-link:hover{
   background-color: #1b1b1b;
@@ -38,8 +39,8 @@ body{
   border-left: 3px solid orange;
 }
 .title{
-  padding: 16px;
-  font-size: 1.06em;
+  padding: 16px 20px;
+  font-size: 1.03em;
   cursor: pointer;
   font-weight: 300;
   border-bottom: 1px solid #5a5a5a;
