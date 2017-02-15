@@ -42,7 +42,7 @@ body{
   font-size: 1.06em;
   cursor: pointer;
   font-weight: 300;
-  border-bottom: 1px solid #1b1b1b;
+  border-bottom: 1px solid #5a5a5a;
   user-select: none;
 }
 .title:hover{
