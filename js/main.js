@@ -8,6 +8,7 @@ xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     el.data = JSON.parse(this.responseText);
 
+    // Print out all groups and videos from json response
     list.print(el.data, el.playlist);
     list.closeAllGroups();
 

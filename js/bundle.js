@@ -73,6 +73,9 @@
 var playlist = document.querySelector('.playlist');
 var player = document.getElementById('player');
 
+/**
+ * Shared elements and variables
+ */
 var elements = {
   playlist: playlist,
   data: []
@@ -95,6 +98,7 @@ xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     el.data = JSON.parse(this.responseText);
 
+    // Print out all groups and videos from json response
     list.print(el.data, el.playlist);
     list.closeAllGroups();
 
@@ -113,10 +117,14 @@ xhr.send();
 /* 2 */
 /***/ (function(module, exports) {
 
-// Lists all videos from json data
-
 var list = {
+  /**
+   * Prints all videos and groups from
+   * the json data the playlist element
+   */
   print: (data, playlist) => {
+
+    // Loop through each topic/video group
     for (var i = 0; i < data.length; i++) {
       var titleText = data[i].title;
       var vids = data[i].videos;
@@ -145,6 +153,7 @@ var list = {
     }
   },
 
+  // Closes all video groups
   closeAllGroups: () => {
     var groups = document.querySelectorAll('.group');
     for (var i = 1; i < groups.length; i++) {
@@ -152,7 +161,16 @@ var list = {
     }
   }
 }
+module.exports = list;
 
+/*-=-=-=-=-=-=-=-=-=-=-=-
+  Begin private methods
+-=-=-=-=-=-=-=-=-=-=-=*/
+
+/**
+ * Called when video link is clicked.
+ * Loads selected video into player.
+ */
 function selectVideo() {
   // Clearing previous selected
   var previous = document.querySelector('.current');
@@ -171,10 +189,17 @@ function selectVideo() {
   el.player.loadVideoById(this.getAttribute('data-id'));
 }
 
+/**
+ * Called when title is cliced.
+ * Opens or closes the parent video group.
+ */
 function toggleParent(){
   toggle(this.parentNode);
 }
 
+/**
+ * Shows or hides all video links in the group.
+ */
 function toggle(group){
   var links = group.querySelectorAll('.vid-link');
 
@@ -187,15 +212,19 @@ function toggle(group){
   }
 }
 
+/**
+ * Hides the element
+ */
 function hide(element){
   element.classList.add('hidden');
 }
 
+/**
+ * Shows the element
+ */
 function show(element){
   element.classList.remove('hidden');
 }
-
-module.exports = list;
 
 
 /***/ }),
@@ -206,6 +235,7 @@ var el = __webpack_require__(0);
 
 var youtube = {
   start: () => {
+    // Adds script tag to load iframe api asynchronously
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -213,6 +243,9 @@ var youtube = {
   }
 }
 
+/**
+ * Iframe api is ready callback
+ */
 window.onYouTubeIframeAPIReady = () => {
   el.player = new YT.Player('player', {
     height: '390',

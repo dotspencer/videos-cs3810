@@ -2,6 +2,7 @@ var el = require('./elements.js');
 
 var youtube = {
   start: () => {
+    // Adds script tag to load iframe api asynchronously
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -9,6 +10,9 @@ var youtube = {
   }
 }
 
+/**
+ * Iframe api is ready callback
+ */
 window.onYouTubeIframeAPIReady = () => {
   el.player = new YT.Player('player', {
     height: '390',
