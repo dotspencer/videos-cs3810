@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/js/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 4);
@@ -219,7 +219,7 @@ window.onYouTubeIframeAPIReady = () => {
     width: '640',
     videoId: el.data[0].videos[0],
     playerVars: {
-      modestbranding: 1,
+      // modestbranding: 1,
       rel: 0 // Related videos off
     },
     events: {
