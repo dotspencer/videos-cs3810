@@ -16,7 +16,7 @@ xhr.onreadystatechange = function(){
   }
 };
 
-xhr.open('GET', 'videos.json');
+xhr.open('GET', 'data/videos.json');
 xhr.send();
 
 function listAll(data){
