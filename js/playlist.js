@@ -1,3 +1,5 @@
+var el = require('./elements.js');
+
 var list = {
   /**
    * Prints all videos and groups from
@@ -10,26 +12,18 @@ var list = {
       var titleText = data[i].title;
       var vids = data[i].videos;
 
-      var group = document.createElement('div');
-      group.classList.add('group');
+      var group = Group();
 
-      var title = document.createElement('div');
-      title.addEventListener('click', toggleParent);
-      title.classList.add('title');
-      title.innerText = titleText;
-
+      var title = Title(titleText);
       group.appendChild(title);
 
+      // Create all video links
       for (var j = 0; j < vids.length; j++) {
+        var text = "Part: " + (j + 1);
         var id = vids[j];
-        var link = document.createElement('div');
-        link.addEventListener('click', selectVideo);
-        link.classList.add('vid-link');
-        link.innerText = "Part: " + (j + 1);
-        link.setAttribute('data-id', id);
+        var link = VideoLink(text, id);
         group.appendChild(link);
       }
-
       playlist.appendChild(group);
     }
   },
@@ -44,8 +38,37 @@ var list = {
 }
 module.exports = list;
 
+/*-=-=-=-=-=-=-=-
+  DOM Elements
+-=-=-=-=-=-=-=*/
+
+function Title(text){
+  var t = document.createElement('div');
+  t.classList.add('title');
+  t.innerText = text;
+
+  t.addEventListener('click', toggleParent);
+  return t;
+}
+
+function VideoLink(text, id){
+  var link = document.createElement('div');
+  link.classList.add('vid-link');
+  link.innerText = text;
+  link.setAttribute('data-id', id);
+
+  link.addEventListener('click', selectVideo);
+  return link;
+}
+
+function Group(){
+  var group = document.createElement('div');
+  group.classList.add('group');
+  return group;
+}
+
 /*-=-=-=-=-=-=-=-=-=-=-=-
-  Begin private methods
+  Begin Private Methods
 -=-=-=-=-=-=-=-=-=-=-=*/
 
 /**
