@@ -95,7 +95,6 @@ xhr.onreadystatechange = function(){
   if(this.readyState == 4 && this.status == 200){
     el.data = JSON.parse(this.responseText);
 
-    console.log(el);
     list.print(el.data, el.playlist);
     list.closeAllGroups();
 
@@ -219,6 +218,10 @@ window.onYouTubeIframeAPIReady = () => {
     height: '390',
     width: '640',
     videoId: el.data[0].videos[0],
+    playerVars: {
+      modestbranding: 1,
+      rel: 0 // Related videos off
+    },
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange

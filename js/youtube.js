@@ -14,6 +14,10 @@ window.onYouTubeIframeAPIReady = () => {
     height: '390',
     width: '640',
     videoId: el.data[0].videos[0],
+    playerVars: {
+      // modestbranding: 1,
+      rel: 0 // Related videos off
+    },
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
