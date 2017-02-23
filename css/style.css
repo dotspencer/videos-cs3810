@@ -58,7 +58,7 @@ body{
 }
 span.duration {
     float: right;
-    color: gray;
+    color: #666;
 }
 .hidden{
   display: none;
