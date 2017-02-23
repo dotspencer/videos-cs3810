@@ -269,7 +269,7 @@ var youtube = {
   },
 
   showDuration: () => {
-    var vidsPerRequest = 10;
+    var vidsPerRequest = 30;
 
     var vids = getAllVideos(el.data);
     while(vids.length > 0){
