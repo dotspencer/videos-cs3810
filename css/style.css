@@ -56,6 +56,10 @@ body{
   overflow: hidden;
   transition: all .15s;
 }
+span.duration {
+    float: right;
+    color: gray;
+}
 .hidden{
   display: none;
 }

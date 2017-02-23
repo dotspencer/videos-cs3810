@@ -12,6 +12,9 @@ xhr.onreadystatechange = function(){
     list.print(el.data, el.playlist);
     list.closeAllGroups();
 
+    // Request and show video durations
+    yt.showDuration();
+
     document.querySelector('.title').classList.add('lock');
     document.querySelector('.vid-link').classList.add('current');
 
